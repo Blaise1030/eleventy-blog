@@ -14,7 +14,7 @@ content:
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
   - name: blogs
-    label: Bogs
+    label: Blogs
     type: collection
     path: content/blogs
     view:
