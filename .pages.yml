@@ -13,19 +13,20 @@ content:
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
-  - name: blogs
-    label: Blogs
+  - name: pages
+    label: Pages
     type: collection
-    path: content/blogs
+    path: pages
     view:
-      fields: [ title, draft, date ]
+      fields: [ seoTitle, draft, date ]
     fields:
-      - { name: title, label: Title, type: string, required: true }
-      - { name: description, label: Description, type: string }
+      - { name: name, label: Title, type: string, required: true }
+      - { name: seoTitle, label: SEOTitle, type: string, required: true }
+      - { name: seoDescription, label: SEODescription, type: string, required: true }
       - { name: date, label: Date, type: date }
       - { name: draft, label: Draft, type: boolean }
-      - { name: tags, label: Tags, type: string, list: true }
-      - { name: body, label: Body, type: rich-text }
+      - { name: body, label: Body, type: rich-text }      
+      - { name: ui, label: UI, type: rich-text }
   - name: about
     label: About page
     type: file
