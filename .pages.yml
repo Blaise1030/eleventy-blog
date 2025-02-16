@@ -26,7 +26,7 @@ content:
       - { name: date, label: Date, type: date }
       - { name: draft, label: Draft, type: boolean }
       - { name: body, label: Body, type: rich-text }      
-      - { name: ui, label: UI, type: rich-text }
+      - { name: ui, label: UI, type: page }
   - name: about
     label: About page
     type: file
