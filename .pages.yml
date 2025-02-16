@@ -16,6 +16,7 @@ content:
   - name: pages
     label: Pages
     type: collection
+    format: json
     path: pages
     view:
       fields: [ seoTitle, draft, date ]
@@ -25,7 +26,6 @@ content:
       - { name: seoDescription, label: SEODescription, type: string, required: true }
       - { name: date, label: Date, type: date }
       - { name: draft, label: Draft, type: boolean }
-      - { name: body, label: Body, type: rich-text }      
       - { name: ui, label: UI, type: page }
   - name: about
     label: About page
