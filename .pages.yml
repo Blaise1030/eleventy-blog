@@ -19,27 +19,35 @@ content:
     format: json
     path: pages
     view:
-      fields: [ seoTitle, draft, date ]
+      fields: [ name, draft, date ]
     fields:
-      - { name: name, label: Title, type: string, required: true }
+      - { name: name, label: Name, type: string, required: true }
       - { name: seoTitle, label: SEOTitle, type: string, required: true }
       - { name: seoDescription, label: SEODescription, type: string, required: true }
       - { name: date, label: Date, type: date }
       - { name: draft, label: Draft, type: boolean }
       - { name: ui, label: UI, type: page }
-  - name: about
-    label: About page
-    type: file
-    path: content/about/index.md
+  - name: templates
+    label: Templates
+    type: collection
+    format: json
+    path: templates
+    view:
+      fields: [ name ]
     fields:
-      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-      - name: eleventyNavigation
-        label: Navigation
-        type: object
-        fields:
-          - { name: key, label: Key, type: string }
-          - { name: order, label: Order, type: number }
-      - { name: body, label: Body, type: rich-text }      
+      - { name: name, label: Name, type: string, required: true }      
+      - { name: ui, label: UI, type: page }      
+      - { name: collection, label: Collection, type: string }
+  - name: symbols
+    label: Symbols
+    type: collection
+    format: json
+    path: symbols
+    view:
+      fields: [ name ]
+    fields:
+      - { name: name, label: Name, type: string, required: true }      
+      - { name: ui, label: UI, type: page }    
   - name: metadata
     label: Metadata
     type: file
