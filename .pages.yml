@@ -23,12 +23,12 @@ content:
       fields: [ name, draft, date ]
     fields:
       - { name: name, label: Name, type: string, required: true }
+      - { name: slug, label: Slug, type: string }
       - { name: seoTitle, label: SEOTitle, type: string, required: true }
       - { name: seoDescription, label: SEODescription, type: string, required: true }
       - { name: date, label: Date, type: date }
       - { name: draft, label: Draft, type: boolean }
-      - { name: ui, label: UI, type: page }
-      - { name: slug, label: Slug, type: string }
+      - { name: ui, label: UI, type: page }      
   - name: templates
     label: Templates
     type: collection
