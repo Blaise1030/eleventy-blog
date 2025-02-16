@@ -13,6 +13,7 @@ content:
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
       - { name: body, label: Body, type: rich-text }
+      - { name: slug, label: Slug, type: string }
   - name: pages
     label: Pages
     type: collection
@@ -27,6 +28,7 @@ content:
       - { name: date, label: Date, type: date }
       - { name: draft, label: Draft, type: boolean }
       - { name: ui, label: UI, type: page }
+      - { name: slug, label: Slug, type: string }
   - name: templates
     label: Templates
     type: collection
@@ -36,8 +38,8 @@ content:
       fields: [ name ]
     fields:
       - { name: name, label: Name, type: string, required: true }      
-      - { name: ui, label: UI, type: page }      
-      - { name: collection, label: Collection, type: string }
+      - { name: ui, label: UI, type: page, required: true }      
+      - { name: collection, label: Collection, type: string }      
   - name: symbols
     label: Symbols
     type: collection
@@ -47,7 +49,7 @@ content:
       fields: [ name ]
     fields:
       - { name: name, label: Name, type: string, required: true }      
-      - { name: ui, label: UI, type: page }    
+      - { name: ui, label: UI, type: page, required: true }    
   - name: metadata
     label: Metadata
     type: file
